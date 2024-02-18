@@ -49,7 +49,7 @@
               </div>
                 <img height="220" width="48" src="images/cupon-devider.png" alt="">
                 <div class="flex flex-col p-14">
-                    <h1 class="text-3xl font-bold">NEW<span>15</span>
+                    <h1 class="text-3xl font-bold">NEW15
                     </h1>
                     <p class="text-lg font-medium mt-3">Coupon Code</p>
                 </div>
@@ -254,8 +254,11 @@
             </ul>
            </div> -->
            <!-- <div class="mt-4"> -->
-            <div class="flex">
-            <ul class=" w-[300px]"  id="cart-container" >
+            <div class="flex gap-3" >
+            <ul class="flex gap-4 justify-between w-[300px]">
+              <li  id="cart-container1"></li>
+              <li class="ml-[230px]" id="cart-container2"></li>
+              <li class="ml-[170px]" id="cart-container3"></li>
            <!-- <li><h1 id="seat-list"></h1></li> -->
            <!-- <li> <h1>Economy</h1></li> -->
            <!-- <li><h1>550</h1></li> -->
@@ -268,9 +271,18 @@
             
             <h1>BDT <span id="ticket-cost">0</span></h1>
            </div>
+           <div class="flex justify-between mt-4">
+            <!-- <ul class="flex justify-between">
+            <li id="discount-price1"></li>
+            <li id="discount-price2"></li>
+            </ul> -->
+            <h1 id="discount-price1"></h1>
+            <p id="discount-price3" class="ml-[370px]"></p>
+            <h1 id="discount-price2"></h1>
+           </div>
          <div class="mt-4 flex">
-          <input class="py-5 pl-10 pr-[128px] rounded-xl flex-1" width="340px" type="text" placeholder="have any copun">
-          <button class="bg-[#1DD100] px-[20px] py-[10px]  rounded-lg">Apply</button>
+          <input id="input-field" class="py-5 pl-10 pr-[128px] rounded-xl flex-1" width="340px" type="text" placeholder="have any copun">
+          <button id="apply-btn" class="bg-[#1DD100] px-[20px] py-[10px]  rounded-lg">Apply</button>
           
          </div>
          <div class="flex justify-between mt-6">
