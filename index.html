@@ -29,7 +29,9 @@
                 <h1 class="text-[16px] lg:text-[64px] font-extrabold text-white text-center">End-to-End Travel With <br>
                     <span class="text-[#1DD100]">P Paribahan</span></h1>
                     <p class="w-[330px] lg:w-[700px] text-center  lg:mt-4 text-[#FFFFFF] text-lg font-normal font-inter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam natus voluptatem at quisquam voluptates quo facilis, cum soluta atque dignissimos </p>
-                    <button class="bg-[#1DD100] mt-3 lg:mt-8 text-sm lg:text-xl font-bold py-2 lg:py-3 px-3 lg:px-5 rounded-xl text-[#030712]">Buy Tickets</button>
+                   
+                    <a href="#scroll-down" class="btn bg-[#1DD100] mt-3 lg:mt-8 text-sm lg:text-xl font-bold py-2 lg:py-3 px-3 lg:px-5 rounded-xl text-[#030712] border-none">Buy Tickets</a>
+                   
               </div>
          </div>
         </section>
@@ -57,7 +59,7 @@
                 <div class="flex flex-col p-10">
                   <h1 class="text-[40px] font-black  text-[#030712CC]">20% OFF</h1>
                   <p class="text-xl font-semibold">on your purchase <br>
-                  <span class="text-lg font-medium">use by January 2024</span></p>
+                    <span class="text-lg font-medium">use by January 2024</span></p>
                 </div>
                   <img height="220" width="48" src="images/cupon-devider.png" alt="">
                   <div class="flex flex-col p-14">
@@ -75,7 +77,7 @@
     </header>
 
     <main class="main mt-28 border-t-2 border-[#1DD100] bg-[#F7F8F8]">
-       <section class="container mx-auto mt-28 ">
+       <section id="scroll-down" class="container mx-auto mt-28 ">
           <h1 class="text-center text-[40px] font-bold text-[#030712] mb-6 mr-[220px]">P.H Paribahan</h1>
           <p class="text-center text-lg font-normal text-[#03071299] mr-[220px]">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
             
@@ -95,7 +97,7 @@
           </div>
           <div class="flex justify-center items-center gap-2 ml-[50px] text-center bg-[#1DD10026] p-[17px] rounded-xl">
             <img src="images/seat-green.png" alt="">
-            <p class="text-center text-lg font-medium text-[#1DD100]">40 Seats left</p>
+            <p class="text-center text-lg font-medium text-[#1DD100]"> <span id="seat-decrease">40</span> Seats left</p>
           </div>
           
           
@@ -196,39 +198,39 @@
         <p class="pt-[58px] text-[18px] font-medium text-[#03071280]">A</p>
         <p class="pt-[58px] text-[18px] font-medium text-[#03071280]">A</p>
       </div> -->
-        <div class="grid grid-cols-2 gap-8 ">
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">A1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">A2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">B1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">B2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">C1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">C2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">D1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">D2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">E1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">E2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">F1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">F2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">G1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">G2</p>
+        <div class=" grid grid-cols-2 gap-8 ">
+          <p id="A1" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">A1</p>
+          <p id="A2" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">A2</p>
+          <p id="B1" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">B1</p>
+          <p id="B2" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">B2</p>
+          <p id="C1" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">C1</p>
+          <p id="C2" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">C2</p>
+          <p id="D1" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">D1</p>
+          <p id="D2" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">D2</p>
+          <p id="E1" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">E1</p>
+          <p id="E2" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">E2</p>
+          <p id="F1" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">F1</p>
+          <p id="F2" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">F2</p>
+          <p id="G1" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">G1</p>
+          <p id="G2" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">G2</p>
 
-        </div>
+         </div>
 
-        <div class="grid grid-cols-2 gap-8">
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">A1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">A2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">B1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">B2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">C1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">C2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">D1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">D2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">E1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">E2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">F1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">F2</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">G1</p>
-          <p class="text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">G2</p>
+        <div class=" grid grid-cols-2 gap-8">
+          <p id="A3" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">A3</p>
+          <p id="A4" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">A4</p>
+          <p id="B3" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">B3</p>
+          <p id="B4" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">B4</p>
+          <p id="C3" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">C3</p>
+          <p id="C4" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">C4</p>
+          <p id="D3" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">D3</p>
+          <p id="D4" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">D4</p>
+          <p id="E3" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">E3</p>
+          <p id="E4" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">E4</p>
+          <p id="F3" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">F3</p>
+          <p id="F4" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">F4</p>
+          <p id="G3" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">G3</p>
+          <p id="G4" class="seat-part text-[18px] font-medium rounded-xl bg-[#F7F8F8] py-[17px] px-[45px]">G4</p>
 
         </div>
       </div>
@@ -238,27 +240,33 @@
           <div class="hr-tag mt-6 w-[550px]"></div>
           <div class="bg-[#F7F8F8] p-8 mt-6 rounded-xl">
            <div class="flex justify-between">
-            <h1>Seat<sup>2</sup>
+            <h1>Seat <span class="bg-[#1DD100] px-1 py-[2px] rounded-md text-base font-bold text-[#FFFFFF]" id="seat-Number">0</span>
               <h1>Class</h1>
               <h1>Price</h1>
             </h1>
            </div>
            <div class="hr-tag mt-[15px] w-[550px] "></div>
-           <div class="flex justify-between mt-4">
-            <h1>C2</h1>
-            <h1>Economy</h1>
-            <h1>550</h1>
-           </div>
-           <div class="flex justify-between mt-4">
-            <h1>C2</h1>
-            <h1>Economy</h1>
-            <h1>550</h1>
-           </div>
+           <!-- <div class="mt-4">
+            <ul class="flex justify-between">
+           <li><h1 id="seat-list"></h1></li>
+           <li> <h1>Economy</h1></li>
+           <li><h1>550</h1></li>
+            </ul>
+           </div> -->
+           <!-- <div class="mt-4"> -->
+            <div class="flex">
+            <ul class=" w-[300px]"  id="cart-container" >
+           <!-- <li><h1 id="seat-list"></h1></li> -->
+           <!-- <li> <h1>Economy</h1></li> -->
+           <!-- <li><h1>550</h1></li> -->
+            </ul>
+            </div>
+           <!-- </div> -->
            <div class="hr-tag mt-[15px] w-[550px] "></div>
            <div class="flex justify-between mt-4">
             <h1>Total Price</h1>
             
-            <h1>BDT 1100</h1>
+            <h1>BDT <span id="ticket-cost">0</span></h1>
            </div>
          <div class="mt-4 flex">
           <input class="py-5 pl-10 pr-[128px] rounded-xl flex-1" width="340px" type="text" placeholder="have any copun">
@@ -267,7 +275,7 @@
          </div>
          <div class="flex justify-between mt-6">
           <h1>Grand Total</h1>
-          <h1>BDT 1100</h1>
+          <h1>BDT <span  id="grand-cost">0</span></h1>
         </div>
           </div>
 
@@ -287,6 +295,7 @@
         </div>
        </section>
     </main>
+    <script src="scripts/model.js"></script>
 </body>
 </html>
 
