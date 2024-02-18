@@ -16,6 +16,10 @@ function setBackgroundColor(elementId){
     element.classList.add('bg-green-500')
 }  
 
+// function setDisabled(elementId){
+//     element = document.getElementById(elementId);
+//     element.disabled = true;
+// }
 function setInnerText(elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
@@ -24,6 +28,11 @@ function setInnerText(elementId, value){
 function color(elementId){
     element = document.getElementById(elementId)
     element.classList.add('text-stone-50');
+}
+
+function hiddenElement(elementId){
+    element = document.getElementById(elementId);
+    element.classList.add('hidden');
 }
 
 
@@ -35,11 +44,15 @@ let price1 =0;
 let sum = 0;
 for(const seat of allSeat){
     seat.addEventListener('click', function(e){
+       
+      
       
         if(sum < 4){
         const seatColor = e.target.innerText;
+      
         setBackgroundColor(seatColor);
-
+      
+        
         color(e.target.innerText);
         
         count++;
@@ -51,7 +64,7 @@ for(const seat of allSeat){
 
       const cartContainer = document.getElementById('cart-container1');
 
-   
+      
      
       
       const p = document.createElement('p');
@@ -78,16 +91,16 @@ for(const seat of allSeat){
         price1+=550;
         setInnerText('grand-cost', price1);
         sum++;
-        if(sum === 4){
-            return sum;
-        }
+        // if(sum === 4){
+        //     return sum;
+        // }
         }
 
         else{
             alert('You have booked already 4 seat');
         }
 
-
+      
 
 
     })
@@ -105,6 +118,9 @@ else{
   const inputCupon = document.getElementById('input-field').value;
 
    if(price >= 2200){
+   setBackgroundColor('apply-btn');
+    hiddenElement('apply-btn');
+    hiddenElement('input-field');
     if(inputCupon === "NEW15"){
       const discountPrice = price * 0.15;
 
@@ -129,6 +145,8 @@ else{
 
     const grandTotal = document.getElementById('grand-cost');
     grandTotal.innerText = price - discountPrice;
+
+    
     }
     else if(inputCupon === "Couple 20")
     {
@@ -164,4 +182,20 @@ else{
     alert("PLease booking atleast 4 seats");
    }
 }
+})
+
+
+const nextButton = document.getElementById('next-btn');
+const textInput = document.getElementById('phone')
+
+textInput.addEventListener('input', function(){
+   
+    const phoneNumber = document.getElementById('phone').value;
+    if(phoneNumber.length > 4 && sum > 0){
+        
+        nextButton.disabled = false;
+    }
+    else{
+        nextButton.disabled = true;
+    }
 })
