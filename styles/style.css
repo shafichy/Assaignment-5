@@ -20,3 +20,7 @@ body{
 .hr-tag{
     border: 1px dashed rgba(3, 7, 18, 0.2);
 }
+
+.bord{
+    border:1.5px dashed #FFFFFF4D;
+}

@@ -53,6 +53,9 @@ let price = 0;
 let price1 =0;
 let sum = 0;
 let cnt = 0;
+let checkSeat = [];
+let checkCount = [];
+let checkPrice = [];
 for(const seat of allSeat){
     seat.addEventListener('click', function(e){
     
@@ -64,11 +67,14 @@ for(const seat of allSeat){
         
         color(e.target.innerText);
         
+        if(!checkCount.includes(e.target.innerText)){
         count++;
         setInnerText('seat-Number',count);
 
         count1--;
         setInnerText('seat-decrease', count1);
+        checkCount.push(e.target.innerText);
+        }
        
 
       const cartContainer = document.getElementById('cart-container1');
@@ -76,22 +82,30 @@ for(const seat of allSeat){
       
       const p = document.createElement('p');
       p.innerText = e.target.innerText;
+      console.log(p);
       
-      cartContainer.appendChild(p);
+      if(!checkSeat.includes(p.innerText))
+      {
+        cartContainer.appendChild(p);
    
       
-    const cartContainer1 = document.getElementById('cart-container2')
-      const p1 = document.createElement('p');
-      p1.innerText = 'Economy';
-  cartContainer1.appendChild(p1);
+        const cartContainer1 = document.getElementById('cart-container2')
+          const p1 = document.createElement('p');
+          p1.innerText = 'Economy';
+      cartContainer1.appendChild(p1);
+    
+      const cartContainer2 = document.getElementById('cart-container3')
+          const p2 = document.createElement('p');
+          p2.innerText = '550';
+          cartContainer2.appendChild(p2);
 
-  const cartContainer2 = document.getElementById('cart-container3')
-      const p2 = document.createElement('p');
-      p2.innerText = '550';
-      cartContainer2.appendChild(p2);
+          checkSeat.push(p.innerText);
+          console.log(checkSeat);
+      }
+     
 
 
-
+  if(!checkPrice.includes(e.target.innerText)){
         price+=550;
         setInnerText('ticket-cost', price);
         
@@ -105,9 +119,9 @@ for(const seat of allSeat){
         else{
             document.getElementById('apply-btn').disabled = true;
         }
-        
+        checkPrice.push(e.target.innerText);
         }
-
+    }
         else{
             alert('You have booked already 4 seat');
         }
