@@ -24,3 +24,6 @@ body{
 .bord{
     border:1.5px dashed #FFFFFF4D;
 }
+.card-green{
+    border-bottom: 3px solid rgb(29, 209, 0);
+}

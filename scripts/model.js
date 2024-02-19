@@ -19,6 +19,12 @@ function hiddenElement(elementId){
     element.classList.add('hidden');
 }
 
+function addElementById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
+}
+
+
 function discountPrice(value){
     const discountPrice = price * value;
 
@@ -126,6 +132,16 @@ for(const seat of allSeat){
             alert('You have booked already 4 seat');
         }
        
+        const phoneNumber = textInput.value;
+    if(sum > 0){
+        if(phoneNumber.length > 10 ){
+            setBackgroundColor('next-btn');
+            nextButton.disabled = false;
+        }
+    }
+    else{
+        nextButton.disabled = true;
+    }
 
     })
 }
@@ -172,23 +188,49 @@ const textInput = document.getElementById('phone')
 textInput.addEventListener('input', function(){
    
     const phoneNumber = textInput.value;
-    if(phoneNumber.length > 3 && sum > 0 ){
-
-        setBackgroundColor('next-btn');
-         
-        nextButton.disabled = false;
+    if(sum > 0){
+        if(phoneNumber.length > 10 ){
+            setBackgroundColor('next-btn');
+            nextButton.disabled = false;
+        }
     }
     else{
         nextButton.disabled = true;
     }
+
+    // if(phoneNumber.length > 3 &&  sum > 0 ){
+
+    //     setBackgroundColor('next-btn');
+         
+    //     nextButton.disabled = false;
+    // }
+    // else{
+    //     nextButton.disabled = true;
+    // }
 })
 
 
+// const lastButton = document.getElementById('continue');
 
+// lastButton.addEventListener('click', function(){
+   
+// })
 
-
-
-
+// const buttonLast = document.getElementById('next-btn')
+// buttonLast.addEventListener('click', function(){
+//     hiddenElement('main-section');
+//     hiddenElement('head-section');
+//     hiddenElement('foot-section');
+//     document.getElementById('my-modal').classList.remove('hidden');
+// })
+const continueButton = document.getElementById('continue');
+continueButton.addEventListener('click', function(){
+    
+    hiddenElement('head-section');
+    hiddenElement('main-section');
+    hiddenElement('foot-section');
+    window.location.reload();
+})
 
 
 
