@@ -1,25 +1,9 @@
-// function randomSeat(){
-//     const seat = [A1,A2,A3,A4,B1,B2,B3,B4,C1,C2,C3,C4,D1,D2,D3,D4,E1,E2,E3,E4,F1,F2,F3,F4,G1,G2,G3,G4];
-
-
-    
-
-//     const randomNumber = Math.random()*28;
-//     const index = Math.round(randomNumber);
-//     const seatNumber = seat[index];
-//     return seatNumber;
-// }
-
-
 function setBackgroundColor(elementId){
     element = document.getElementById(elementId);
-    element.classList.add('bg-green-500')
+    element.classList.add('bg-green-500');
 }  
 
-// function setDisabled(elementId){
-//     element = document.getElementById(elementId);
-//     element.disabled = true;
-// }
+
 function setInnerText(elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
@@ -35,6 +19,32 @@ function hiddenElement(elementId){
     element.classList.add('hidden');
 }
 
+function discountPrice(value){
+    const discountPrice = price * value;
+
+    const discountElement = document.getElementById('discount-price1');
+
+  const discountText = document.getElementById('discount-price2');
+
+  const discountText1 = document.getElementById('discount-price3')
+
+  const p = document.createElement('p');
+  p.innerText = 'Discount Price';
+  discountElement.appendChild(p);
+
+
+  const p3 = document.createElement('p');
+  p3.innerText = 'BDT'
+  discountText1.appendChild(p3);
+
+  const p1 = document.createElement('p');
+  p1.innerText = discountPrice;
+  discountText.appendChild(p1);
+
+  const grandTotal = document.getElementById('grand-cost');
+  grandTotal.innerText = price - discountPrice;
+}
+
 
 const allSeat = document.getElementsByClassName('seat-part')
 let count = 0;
@@ -42,11 +52,10 @@ let count1 = 40;
 let price = 0;
 let price1 =0;
 let sum = 0;
+let cnt = 0;
 for(const seat of allSeat){
     seat.addEventListener('click', function(e){
-       
-      
-      
+    
         if(sum < 4){
         const seatColor = e.target.innerText;
       
@@ -64,8 +73,6 @@ for(const seat of allSeat){
 
       const cartContainer = document.getElementById('cart-container1');
 
-      
-     
       
       const p = document.createElement('p');
       p.innerText = e.target.innerText;
@@ -91,17 +98,20 @@ for(const seat of allSeat){
         price1+=550;
         setInnerText('grand-cost', price1);
         sum++;
-        // if(sum === 4){
-        //     return sum;
-        // }
+        if(sum === 4){
+            setBackgroundColor('apply-btn');
+            document.getElementById('apply-btn').disabled = false;
+        }
+        else{
+            document.getElementById('apply-btn').disabled = true;
+        }
+        
         }
 
         else{
             alert('You have booked already 4 seat');
         }
-
-      
-
+       
 
     })
 }
@@ -109,79 +119,36 @@ for(const seat of allSeat){
 
 const applyButton = document.getElementById('apply-btn');
 
+
 applyButton.addEventListener('click', function(e){
 
-if(price < 2200){
- applyButton.disabled = true;
-}
-else{
+
+
   const inputCupon = document.getElementById('input-field').value;
 
    if(price >= 2200){
-   setBackgroundColor('apply-btn');
+
     hiddenElement('apply-btn');
     hiddenElement('input-field');
     if(inputCupon === "NEW15"){
-      const discountPrice = price * 0.15;
-
-      const discountElement = document.getElementById('discount-price1');
-
-    const discountText = document.getElementById('discount-price2');
-
-    const discountText1 = document.getElementById('discount-price3')
-
-    const p = document.createElement('p');
-    p.innerText = 'Discount Price';
-    discountElement.appendChild(p);
-
-
-    const p3 = document.createElement('p');
-    p3.innerText = 'BDT'
-    discountText1.appendChild(p3);
-
-    const p1 = document.createElement('p');
-    p1.innerText = discountPrice;
-    discountText.appendChild(p1);
-
-    const grandTotal = document.getElementById('grand-cost');
-    grandTotal.innerText = price - discountPrice;
-
+        discountPrice(0.15);
     
     }
     else if(inputCupon === "Couple 20")
     {
-        const discountPrice = price * 0.2;
-
-        const discountElement = document.getElementById('discount-price1');
-  
-      const discountText = document.getElementById('discount-price2');
-  
-      const discountText1 = document.getElementById('discount-price3')
-  
-      const p = document.createElement('p');
-      p.innerText = 'Discount Price';
-      discountElement.appendChild(p);
-  
-  
-      const p3 = document.createElement('p');
-      p3.innerText = 'BDT'
-      discountText1.appendChild(p3);
-  
-      const p1 = document.createElement('p');
-      p1.innerText = discountPrice;
-      discountText.appendChild(p1);
-
-      const grandTotal = document.getElementById('grand-cost');
-      grandTotal.innerText = price - discountPrice;
+        
+        discountPrice(0.2);
+   
     }
     else{
         alert("Invalid Coupone");
        }
    }
    else{
+    
     alert("PLease booking atleast 4 seats");
    }
-}
+
 })
 
 
@@ -190,12 +157,76 @@ const textInput = document.getElementById('phone')
 
 textInput.addEventListener('input', function(){
    
-    const phoneNumber = document.getElementById('phone').value;
-    if(phoneNumber.length > 4 && sum > 0){
-        
+    const phoneNumber = textInput.value;
+    if(phoneNumber.length > 3 && sum > 0 ){
+
+        setBackgroundColor('next-btn');
+         
         nextButton.disabled = false;
     }
     else{
         nextButton.disabled = true;
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+ //   const discountPrice = price * 0.15;
+
+    //   const discountElement = document.getElementById('discount-price1');
+
+    // const discountText = document.getElementById('discount-price2');
+
+    // const discountText1 = document.getElementById('discount-price3')
+
+    // const p = document.createElement('p');
+    // p.innerText = 'Discount Price';
+    // discountElement.appendChild(p);
+
+
+    // const p3 = document.createElement('p');
+    // p3.innerText = 'BDT'
+    // discountText1.appendChild(p3);
+
+    // const p1 = document.createElement('p');
+    // p1.innerText = discountPrice;
+    // discountText.appendChild(p1);
+
+    // const grandTotal = document.getElementById('grand-cost');
+    // grandTotal.innerText = price - discountPrice;
+
+
+
+
+ //     const discountPrice = price * 0.2;
+
+    //     const discountElement = document.getElementById('discount-price1');
+  
+    //   const discountText = document.getElementById('discount-price2');
+  
+    //   const discountText1 = document.getElementById('discount-price3')
+  
+    //   const p = document.createElement('p');
+    //   p.innerText = 'Discount Price';
+    //   discountElement.appendChild(p);
+  
+  
+    //   const p3 = document.createElement('p');
+    //   p3.innerText = 'BDT'
+    //   discountText1.appendChild(p3);
+  
+    //   const p1 = document.createElement('p');
+    //   p1.innerText = discountPrice;
+    //   discountText.appendChild(p1);
+
+    //   const grandTotal = document.getElementById('grand-cost');
+    //   grandTotal.innerText = price - discountPrice;

@@ -51,7 +51,7 @@
               </div>
                 <img height="220" width="48" src="images/cupon-devider.png" alt="">
                 <div class="flex flex-col p-14">
-                    <h1 class="text-3xl font-bold">NEW15
+                    <h1 class="text-3xl font-bold font-Raleway">NEW15
                     </h1>
                     <p class="text-lg font-medium mt-3">Coupon Code</p>
                 </div>
@@ -80,10 +80,10 @@
 
     <main class="main mt-28 border-t-2 border-[#1DD100] bg-[#F7F8F8]">
        <section id="scroll-down" class="container mx-auto mt-28 ">
-          <h1 class="text-center text-[40px] font-bold text-[#030712] mb-6 mr-[220px]">P.H Paribahan</h1>
-          <p class="text-center text-lg font-normal text-[#03071299] mr-[220px]">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
+          <h1 class="text-center text-[40px] font-bold text-[#030712] mb-6 mr-[220px] ml-[250px]">P.H Paribahan</h1>
+          <p class="text-center text-lg font-normal text-[#03071299] mr-[220px] font-inter ml-[250px]">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
             
-          <div class="bg-[#FFFFFF] w-[1500px] rounded-3xl mt-12">
+          <div class="bg-[#FFFFFF] w-[1540px] rounded-3xl mt-12 pl-[50px]">
           <div class="flex relative">
             
             <div>
@@ -97,9 +97,9 @@
            </div>
            
           </div>
-          <div class="flex justify-center items-center gap-2 ml-[50px] text-center bg-[#1DD10026] p-[17px] rounded-xl">
+          <div class="flex justify-center items-center gap-2 ml-[30px] text-center bg-[#1DD10026] p-[17px] rounded-xl">
             <img src="images/seat-green.png" alt="">
-            <p class="text-center text-lg font-medium text-[#1DD100]"> <span id="seat-decrease">40</span> Seats left</p>
+            <p class="text-center text-lg font-medium text-[#1DD100]"> <span  id="seat-decrease">40</span> Seats left</p>
           </div>
           
           
@@ -147,7 +147,7 @@
        </section>
 
 
-       <section class="container mx-auto mt-7 bg-[#FFFFFF] p-8">
+       <section class="container mx-auto mt-7 bg-[#FFFFFF] p-8 rounded-3xl">
         <div class="flex gap-36">
         <div>
       <h1>Select your seat</h1>
@@ -283,9 +283,9 @@
             <h1 id="discount-price2"></h1>
            </div>
          <div class="mt-4 flex">
-          <input id="input-field" class="py-5 pl-10 pr-[128px] rounded-xl flex-1" width="340px" type="text" placeholder="have any copun">
-          <button id="apply-btn" class="bg-[#1DD100]   px-[20px] py-[10px]  rounded-lg">Apply</button>
-         
+          <input id="input-field"  class="py-5 pl-10 pr-[128px] rounded-xl flex-1" width="340px" type="text" placeholder="have any copun">
+          <button id="apply-btn" disabled class="bg-slate-600 text-white   px-[20px] py-[10px]  rounded-lg">Apply</button>
+          <!-- bg-[#1DD100]  -->
          </div>
          <div class="flex justify-between mt-6">
           <h1>Grand Total</h1>
@@ -306,9 +306,10 @@
             <input class="mt-4 border border-[#0307121A] rounded-xl py-5 pl-10 pr-[216px] w-[600px]"  type="email" placeholder="Enter your email iD">
            
           </div>
+          
+          <!-- bg-[#1DD100] -->
+          <button id="next-btn" disabled class=" bg-slate-600   py-[30px] px-[280px] mt-4 text-[#FFFFFF] text-xl  font-extrabold rounded-2xl text-center"  onclick="my_modal_5.showModal()">Next</button>
 
-
-          <button id="next-btn" disabled class=" bg-[#1DD100] py-[30px] px-[280px] mt-4 text-[#FFFFFF] text-xl  font-extrabold rounded-2xl text-center"  onclick="my_modal_5.showModal()">Next</button>
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box ">
     <img class="ml-[180px] w-[97px] h-[100px] mt-[57px]" src="images/success.png" alt="">
